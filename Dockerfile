@@ -5,9 +5,9 @@ LABEL maintainer="The Prometheus Authors <prometheus-developers@googlegroups.com
 
 ARG ARCH="amd64"
 ARG OS="linux"
-COPY .build/${OS}-${ARCH}/stackdriver_exporter /bin/stackdriver_exporter
+#COPY .build/${OS}-${ARCH}/stackdriver_exporter /bin/stackdriver_exporter
 COPY LICENSE /LICENSE
 
 USER       nobody
-ENTRYPOINT ["/bin/stackdriver_exporter"]
+ENTRYPOINT ["/stackdriver_exporter"]
 EXPOSE     9255
